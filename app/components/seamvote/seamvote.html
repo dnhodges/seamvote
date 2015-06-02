@@ -1,0 +1,15 @@
+<h1>Vote for your top four restaurants.</h1>
+
+<div>
+  <div class="search">
+    <search-by-name name-query="vm.nameQuery"></search-by-name>
+    <search-by-cuisine></search-by-cuisine>
+  </div>
+
+  <div class="choices">
+    <choice ng-repeat="restaurantName in vm.restaurantNames | filter: vm.nameQuery" class="button hvr-grow"
+      name="restaurantName" show-modal="vm.showModal"></choice>
+  </div>
+</div>
+
+<confirm ng-show="vm.showModal"></confirm>
